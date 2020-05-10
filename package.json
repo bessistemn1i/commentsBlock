@@ -1,0 +1,33 @@
+{
+  "name": "commentsBlock",
+  "version": "1.0.0",
+  "description": "Comments block",
+  "main": "index.js",
+  "scripts": {
+    "styles": "./node_modules/gulp/bin/gulp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bessistemn1i/commentsBlock.git"
+  },
+  "author": "Eduard Zhulega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bessistemn1i/commentsBlock/issues"
+  },
+  "homepage": "https://github.com/bessistemn1i/commentsBlock#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "sass-module-importer": "^1.4.0",
+    "webpack": "^4.39.3",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {}
+}
