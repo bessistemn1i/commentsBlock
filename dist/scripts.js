@@ -86,27 +86,27 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/modules/fabric.js":
-/*!**********************************!*\
-  !*** ./src/js/modules/fabric.js ***!
-  \**********************************/
+/***/ "./src/js/modules/addStar.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/addStar.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nclass Pig {\r\n    feedCattle() {\r\n        console.log('feed trash');\r\n    }\r\n}\r\nclass Horse {\r\n    feedCattle() {\r\n        console.log('feed grass');\r\n    }\r\n}\r\nclass Cow {\r\n    feedCattle() {\r\n        console.log('feed water');\r\n    }\r\n}\r\n\r\nclass CattleFeed {\r\n    feed() {\r\n        const currentAnimal = this.getCurrentAnimal();\r\n        return currentAnimal.feedCattle();\r\n    }\r\n}\r\n\r\nclass PigFeed extends CattleFeed {\r\n    getCurrentAnimal() {\r\n        return new Pig();\r\n    }\r\n}\r\nclass HorseFeed extends CattleFeed {\r\n    getCurrentAnimal() {\r\n        return new Horse();\r\n    }\r\n}\r\nclass CowFeed extends CattleFeed {\r\n    getCurrentAnimal() {\r\n        return new Cow();\r\n    }\r\n}\r\n\r\nclass Fabric {\r\n    constructor() {\r\n        this.addEvents();\r\n    }\r\n\r\n    addEvents() {\r\n        const pigFeed = new PigFeed;\r\n        pigFeed.feed();\r\n        const horseFeed = new HorseFeed;\r\n        horseFeed.feed();\r\n        const cowFeed = new CowFeed;\r\n        cowFeed.feed();\r\n    }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Fabric);\n\n//# sourceURL=webpack:///./src/js/modules/fabric.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nclass AddStar {\r\n    constructor() {\r\n        this.ratingContainerWidth = 66;\r\n        this.ratingContainers = document.querySelectorAll('.comment-info__rating-stars-front');\r\n        this.addEvents()\r\n    }\r\n\r\n    getRandomIntInclusive(min, max) {\r\n        const res = Math.random() * (max - min) + min;\r\n        return parseFloat(res.toFixed(1));\r\n      }\r\n\r\n    addEvents() {\r\n        const random = this.getRandomIntInclusive(1,5);\r\n        const correctWidth = (random * this.ratingContainerWidth) / 5;\r\n        console.log(correctWidth);\r\n        this.ratingContainers.forEach((ratingContainer) => {\r\n            console.log(ratingContainer);\r\n            ratingContainer.style.width = `${correctWidth}px`;\r\n        });\r\n    }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (AddStar);\n\n//# sourceURL=webpack:///./src/js/modules/addStar.js?");
 
 /***/ }),
 
-/***/ "./src/js/modules/simpleFabric.js":
+/***/ "./src/js/modules/textExtender.js":
 /*!****************************************!*\
-  !*** ./src/js/modules/simpleFabric.js ***!
+  !*** ./src/js/modules/textExtender.js ***!
   \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nclass WoodenDoors {\r\n    constructor(height, width) {\r\n        this.height = height;\r\n        this.width = width;\r\n    }\r\n\r\n    getWidth() {\r\n        return this.height;\r\n    }\r\n\r\n    getHeight() {\r\n        return this.width;\r\n    }\r\n}\r\n\r\nconst MakeDoor = {\r\n    makeDoor: (height,width) => new WoodenDoors(height,width)\r\n}\r\n\r\nclass SimpleFabric {\r\n    constructor() {\r\n        this.addEvents();\r\n    }\r\n    addEvents() {\r\n        const p = document.createElement('p');\r\n        const door = MakeDoor.makeDoor(12,21);\r\n        p.innerText = door.getHeight();\r\n        document.body.appendChild(p);\r\n        \r\n    }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (SimpleFabric);\n\n//# sourceURL=webpack:///./src/js/modules/simpleFabric.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nclass TextExtender {\r\n    constructor(obj) {\r\n        this.triggers = document.querySelectorAll(obj.triggers);\r\n        this.target = document.querySelectorAll(obj.target);\r\n        this.activeClass = obj.activeClass;\r\n        this.addEvents()\r\n    }\r\n\r\n    findParent(el, cls) {\r\n        while((el = el.parentElement) && !el.classList.contains(cls));\r\n        return el;\r\n    }\r\n\r\n    addEvents() {\r\n        this.triggers.forEach((trigger) => trigger.addEventListener('click', () => {\r\n            const currentParent = this.findParent(trigger, 'comment');\r\n            const currentTarget = currentParent.querySelector('.comment-info__text');\r\n            currentTarget.classList.add(this.activeClass);\r\n            trigger.style.display = 'none';\r\n        }))\r\n    }\r\n}\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (TextExtender);\n\n//# sourceURL=webpack:///./src/js/modules/textExtender.js?");
 
 /***/ }),
 
@@ -118,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass WoodenDoors {\r\n    co
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_simpleFabric__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/simpleFabric */ \"./src/js/modules/simpleFabric.js\");\n/* harmony import */ var _modules_fabric__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/fabric */ \"./src/js/modules/fabric.js\");\n\r\n\r\n\r\nnew _modules_simpleFabric__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n\r\nnew _modules_fabric__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\n//# sourceURL=webpack:///./src/js/scripts.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_textExtender__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/textExtender */ \"./src/js/modules/textExtender.js\");\n/* harmony import */ var _modules_addStar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/addStar */ \"./src/js/modules/addStar.js\");\n\r\n\r\n\r\nnew _modules_textExtender__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\r\n    triggers: '.comment-info__text-more',\r\n    target: '.comment-info__text',\r\n    activeClass: 'comment-info__text--extended'\r\n})\r\n\r\nnew _modules_addStar__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\n//# sourceURL=webpack:///./src/js/scripts.js?");
 
 /***/ })
 

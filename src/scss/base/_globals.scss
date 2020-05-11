@@ -39,6 +39,16 @@ body {
     position: relative;
 }
 
+main {
+    // box model
+    margin: 0 20px;
+
+    @include atTabletCustom {
+        // box model
+        margin: 0;
+    }
+}
+
 *,
 *::before,
 *::after {

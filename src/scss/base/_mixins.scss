@@ -1,8 +1,8 @@
 // breakpoints
 
 // tablets portrait
-@mixin atTablet {
-    @media (min-width: 700px) {
+@mixin atTabletCustom {
+    @media (min-width: 800px) {
         @content;
     }
 }

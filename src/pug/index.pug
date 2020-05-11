@@ -16,8 +16,125 @@ html(lang="en")
 
         main
             .comments
-                h2 comments
-           
+                header.comments__header
+                    h2.comments__title Мои отзывы о товарах
+                .comments__moderation-info
+                    p.comments__moderation-text Ваши отзывы опубликованы на сайте после проверки модератором.
+                .comments__content
+                    header.comments__content-header
+                        .comments__content-header-block
+                            p.comments__content-header-text Фото
+                        .comments__content-header-block
+                            p.comments__content-header-text Наименование&nbsp;товара
+                        .comments__content-header-block
+                            p.comments__content-header-text Ваши отзывы
+                        .comments__content-header-block
+                            p.comments__content-header-text Статус отзыва
+                        .comments__content-header-block
+                            p.comments__content-header-text Действия
+                    .comment.comment--extended
+                        .comment__photo
+                            img.comment__photo-img(src="https://picsum.photos/200/300", alt="Товар 1")
+                        .comment__item-name
+                            a.comment__item-link(href="#").comment__item-name-text Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020
+                        .comment__text-container
+                            .comment-info
+                                .comment-info__rating
+                                    .comment-info__rating-stars
+                                        .comment-info__rating-stars-back
+                                        .comment-info__rating-stars-front
+                                    span.comment-info__rating-value 4,6
+                                .comment-info__critical
+                                    p.comment-info__critical-text Впечатление:
+                                        span.comment-info__critical-val 5
+                                    p.comment-info__critical-text Соответствие:
+                                        span.comment-info__critical-val 4
+                                    p.comment-info__critical-text Надёжность:
+                                        span.comment-info__critical-val 5
+
+                                .comment-info__text-container
+                                    p.comment-info__text Значит купил я данную модель, поработал неделю, отказал один аккумулятор, заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ. С ТАКИМ ПРОДАВЦОМ ПРИЯТНО Значит купил я данную модель, поработал неделю, отказал один аккумулятор, заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ. С ТАКИМ ПРОДАВЦОМ ПРИЯТНО...
+                                    button.comment-info__text-more Подробнее
+
+                                .comment-info__complement
+                                    p.comment-info__complement
+                                    .comment-info__complement-image-container
+                                        img.comment-info__complement-img(src="", alt="")
+                                        img.comment-info__complement-img(src="", alt="")
+                        .comment__status
+                            p.comment__status-text Опубликован
+                            p.comment__status-date 01 августа 2018
+                        .comment__actions
+                            button.comment__action-btn Дополнить&nbsp;отзыв
+                        .comment__extended.comment__extended--in-moderate
+                            .comment__extended-content
+                                header.comment__extended-header
+                                    h4.comment__extended-title Дополнительный отзыв
+                                p.comment__extended-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eaque cupiditate soluta.
+                                .comment__extended-image-container
+                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 1")
+                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 2")
+                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 3")
+                            .comment__extended-status
+                                p.comment__status-text.comment__status-text--in-moderate На модерации
+                                p.comment__status-date 01 августа 2018
+                    .comment
+                        .comment__photo
+                            img.comment__photo-img(src="https://picsum.photos/200/300", alt="Товар 1")
+                        .comment__item-name
+                            a.comment__item-link(href="#").comment__item-name-text Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020
+                        .comment__text-container
+                            .comment-info
+                                .comment-info__rating
+                                    .comment-info__rating-stars
+                                        .comment-info__rating-stars-back
+                                        .comment-info__rating-stars-front
+                                    span.comment-info__rating-value 3,2
+                                .comment-info__critical
+                                    p.comment-info__critical-text Впечатление:
+                                        span.comment-info__critical-val 5
+                                    p.comment-info__critical-text Соответствие:
+                                        span.comment-info__critical-val 4
+                                    p.comment-info__critical-text Надёжность:
+                                        span.comment-info__critical-val 5
+
+                                .comment-info__text-container
+                                    p.comment-info__text Значит купил я данную модель, поработал неделю, отказал один аккумулятор, заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ. С ТАКИМ ПРОДАВЦОМ ПРИЯТНО Значит купил я данную модель, поработал неделю, отказал один аккумулятор, заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ. С ТАКИМ ПРОДАВЦОМ ПРИЯТНО...
+                                    button.comment-info__text-more Подробнее
+
+                                .comment-info__complement
+                                    p.comment-info__complement
+                                    .comment-info__complement-image-container
+                                        img.comment-info__complement-img(src="", alt="")
+                                        img.comment-info__complement-img(src="", alt="")
+                        .comment__status
+                            p.comment__status-text Опубликован
+                            p.comment__status-date 01 августа 2018
+                        .comment__actions
+                            button.comment__action-btn Дополнить&nbsp;отзыв
+                        .comment__extended.comment__extended--in-moderate
+                            .comment__extended-content
+                                header.comment__extended-header
+                                    h4.comment__extended-title Дополнительный отзыв
+                                p.comment__extended-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eaque cupiditate soluta.
+                                .comment__extended-image-container
+                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 1")
+                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 2")
+                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 3")
+                            .comment__extended-status
+                                p.comment__status-text.comment__status-text--in-moderate На модерации
+                                p.comment__status-date 01 августа 2018
+                    .comment.comment--deactivate
+                        .comment__photo
+                            img.comment__photo-img(src="https://picsum.photos/200/300", alt="Товар 1")
+                        .comment__item-name
+                            a.comment__item-link(href="#").comment__item-name-text Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020
+                        .comment__text-container
+                            .comment-info
+                                p.comment-info__description-text К сожалению ваш отзыв не прошёл модерацию
+                        .comment__status
+                            p.comment__status-text.comment__status-text--deactivate Не опубликован
+                            p.comment__status-date 01 августа 2018
         include modules/_footer.pug
 
         

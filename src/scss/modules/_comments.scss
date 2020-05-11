@@ -1,0 +1,115 @@
+.comments {
+    // box model
+    width: 100%;
+    max-width: 930px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.comments__header {
+    // box model
+    margin-bottom: 20px;
+}
+
+.comments__title {
+    // box model
+    margin: 0;
+
+    // typography
+    color: #383838;
+    font-family: $mainFont;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 700;
+}
+
+.comments__moderation-info {
+    // box model
+    width: 100%;
+    margin-bottom: 23px;
+    padding: 20px 40px;
+
+    // visual
+    background-color: #F7F7F7;
+
+    @include atTabletCustom {
+        // box model
+        padding: 30px 75px;
+    }
+}
+
+.comments__moderation-text {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 0;
+
+    // typography
+    color: rgba(56, 56, 56, 0.8);
+    font-family: $mainFont;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+
+    &:before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        left: -25px;
+        top: 50%;
+
+        // box model
+        width: 15px;
+        height: 15px;
+        margin-top: -7px;
+
+        // visual
+        background-image: url("./img/icons/important.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.comments__content {
+    // box model
+    padding: 20px;
+}
+
+.comments__content-header {
+    // box model
+   display: none;
+
+    @include atDesktopS {
+        // box model
+        display: grid;
+        grid-template-columns: minmax(40px, min-content) minmax(145px, min-content) 1fr minmax(110px, min-content) minmax(150px, min-content);
+        grid-column-gap: 35px;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 0 17px;
+        padding-right: 0;
+    }
+
+    // visual
+    border: 1px solid #F2F2F2;
+}
+
+.comments__content-header-block {
+    // box model
+    padding: 10px 0;
+}
+
+.comments__content-header-text {
+    // box model
+    margin: 0;
+
+    // typography
+    color:#979797;
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
