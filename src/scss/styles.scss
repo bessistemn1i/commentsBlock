@@ -10,6 +10,20 @@
 @import 'fonts/fonts';
 @import 'fonts/icons';
 
+//modules
+
+//section-header
+@import "modules/section-title";
+
+//status
+@import "modules/status";
+
+//buttons
+@import "modules/button";
+
+//image Popup
+@import "modules/imagePopup";
+
 //comments
 @import "modules/comments";
 @import "modules/comment";

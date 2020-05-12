@@ -1,0 +1,28 @@
+.status {
+    // box model
+    margin: 0;
+    padding: 4px 8px;
+
+    // typography
+    color: #ffffff;
+    font-family: $mainFont;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+
+    // visual
+    background-color: #50AD01;
+    border-radius: 2px;
+
+    &--in-moderate {
+        // visual
+        opacity: 0.5;
+    }
+
+    &--deactivate {
+        // visual
+        background-color: #A0A0A0;
+    }
+}

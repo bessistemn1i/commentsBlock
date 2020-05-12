@@ -13,7 +13,7 @@ html(lang="en")
         main
             .comments
                 header.comments__header
-                    h2.comments__title Мои отзывы о товарах
+                    h2.section-title Мои отзывы о товарах
                 .comments__moderation-info
                     p.comments__moderation-text Ваши отзывы опубликованы на сайте после проверки модератором.
                 .comments__content
@@ -30,7 +30,7 @@ html(lang="en")
                             p.comments__content-header-text Действия
                     .comment.comment--extended
                         .comment__photo
-                            img.comment__photo-img(src="https://picsum.photos/200/300", alt="Товар 1")
+                            img.comment__photo-img(src="https://picsum.photos/800/600", alt="Товар 1")
                         .comment__item-name
                             a.comment__item-link(href="#").comment__item-name-text Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020
                         .comment__text-container
@@ -58,25 +58,25 @@ html(lang="en")
                                         img.comment-info__complement-img(src="", alt="")
                                         img.comment-info__complement-img(src="", alt="")
                         .comment__status
-                            p.comment__status-text Опубликован
+                            p.status.comment__status-text Опубликован
                             p.comment__status-date 01 августа 2018
                         .comment__actions
-                            button.comment__action-btn Дополнить&nbsp;отзыв
+                            button.button Дополнить&nbsp;отзыв
                         .comment__extended.comment__extended--in-moderate
                             .comment__extended-content
                                 header.comment__extended-header
                                     h4.comment__extended-title Дополнительный отзыв
                                 p.comment__extended-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eaque cupiditate soluta.
                                 .comment__extended-image-container
-                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 1")
-                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 2")
-                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 3")
+                                    img.comment__extended-img(src="https://picsum.photos/id/237/800/600", alt="Товар 1")
+                                    img.comment__extended-img(src="https://picsum.photos/id/232/800/600", alt="Товар 2")
+                                    img.comment__extended-img(src="https://picsum.photos/id/233/800/600", alt="Товар 3")
                             .comment__extended-status
-                                p.comment__status-text.comment__status-text--in-moderate На модерации
+                                p.status.status--in-moderate.comment__status-text На модерации
                                 p.comment__status-date 01 августа 2018
                     .comment
                         .comment__photo
-                            img.comment__photo-img(src="https://picsum.photos/200/300", alt="Товар 1")
+                            img.comment__photo-img(src="https://picsum.photos/800/600", alt="Товар 1")
                         .comment__item-name
                             a.comment__item-link(href="#").comment__item-name-text Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020
                         .comment__text-container
@@ -104,31 +104,36 @@ html(lang="en")
                                         img.comment-info__complement-img(src="", alt="")
                                         img.comment-info__complement-img(src="", alt="")
                         .comment__status
-                            p.comment__status-text Опубликован
+                            p.status.comment__status-text Опубликован
                             p.comment__status-date 01 августа 2018
                         .comment__actions
-                            button.comment__action-btn Дополнить&nbsp;отзыв
+                            button.button Дополнить&nbsp;отзыв
                         .comment__extended.comment__extended--in-moderate
                             .comment__extended-content
                                 header.comment__extended-header
                                     h4.comment__extended-title Дополнительный отзыв
                                 p.comment__extended-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eaque cupiditate soluta.
                                 .comment__extended-image-container
-                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 1")
-                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 2")
-                                    img.comment__extended-img(src="https://picsum.photos/300/200", alt="Товар 3")
+                                    img.comment__extended-img(src="https://picsum.photos/800/600", alt="Товар 1")
+                                    img.comment__extended-img(src="https://picsum.photos/800/600", alt="Товар 2")
+                                    img.comment__extended-img(src="https://picsum.photos/800/600", alt="Товар 3")
                             .comment__extended-status
-                                p.comment__status-text.comment__status-text--in-moderate На модерации
+                                p.status.status--in-moderate.comment__status-text На модерации
                                 p.comment__status-date 01 августа 2018
                     .comment.comment--deactivate
                         .comment__photo
-                            img.comment__photo-img(src="https://picsum.photos/200/300", alt="Товар 1")
+                            img.comment__photo-img(src="https://picsum.photos/800/600", alt="Товар 1")
                         .comment__item-name
                             a.comment__item-link(href="#").comment__item-name-text Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020
                         .comment__text-container
                             .comment-info
                                 p.comment-info__description-text К сожалению ваш отзыв не прошёл модерацию
                         .comment__status
-                            p.comment__status-text.comment__status-text--deactivate Не опубликован
+                            p.status.status--deactivate.comment__status-text Не опубликован
                             p.comment__status-date 01 августа 2018
+        
+            .imagePopup
+                .imagePopup__content
+                    img.imagePopup__img(src="", alt="")
+                    button.button.button--popup.imagePopup__close Закрыть
         script(src="scripts.js")

@@ -1,5 +1,6 @@
 import TextExtender from "./modules/textExtender";
 import AddStar from "./modules/addStar";
+import ImageZoomer from "./modules/imageZoomer";
 
 new TextExtender({
     triggers: '.comment-info__text-more',
@@ -8,3 +9,7 @@ new TextExtender({
 })
 
 new AddStar();
+
+new ImageZoomer({
+    triggers: '.comment__extended-img'
+})
