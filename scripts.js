@@ -98,6 +98,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass AddStar {\r\n    constr
 
 /***/ }),
 
+/***/ "./src/js/modules/imageZoomer.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/imageZoomer.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nclass ImageZoomer {\r\n    constructor(obj) {\r\n        this.triggers = document.querySelectorAll(obj.triggers);\r\n        this.popupContainer = document.querySelector('.imagePopup');\r\n        this.imageInBigSize = this.popupContainer.querySelector('.imagePopup__img');\r\n        this.closer = document.querySelector('.imagePopup__close');\r\n        this.addEvent()\r\n    }\r\n\r\n    addEvent() {\r\n        this.triggers.forEach((trigger) => trigger.addEventListener('click', () => {\r\n            this.popupContainer.classList.add('imagePopup--active');\r\n            this.imageInBigSize.src = trigger.src;\r\n            this.imageInBigSize.alt = trigger.alt;\r\n        }));\r\n\r\n        this.closer.addEventListener('click', () => {\r\n            this.popupContainer.classList.remove('imagePopup--active');\r\n            this.imageInBigSize.src = '';\r\n            this.imageInBigSize.alt = '';\r\n        })\r\n    }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (ImageZoomer);\n\n//# sourceURL=webpack:///./src/js/modules/imageZoomer.js?");
+
+/***/ }),
+
 /***/ "./src/js/modules/textExtender.js":
 /*!****************************************!*\
   !*** ./src/js/modules/textExtender.js ***!
@@ -118,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass TextExtender {\r\n    c
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_textExtender__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/textExtender */ \"./src/js/modules/textExtender.js\");\n/* harmony import */ var _modules_addStar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/addStar */ \"./src/js/modules/addStar.js\");\n\r\n\r\n\r\nnew _modules_textExtender__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\r\n    triggers: '.comment-info__text-more',\r\n    target: '.comment-info__text',\r\n    activeClass: 'comment-info__text--extended'\r\n})\r\n\r\nnew _modules_addStar__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\n//# sourceURL=webpack:///./src/js/scripts.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_textExtender__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/textExtender */ \"./src/js/modules/textExtender.js\");\n/* harmony import */ var _modules_addStar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/addStar */ \"./src/js/modules/addStar.js\");\n/* harmony import */ var _modules_imageZoomer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/imageZoomer */ \"./src/js/modules/imageZoomer.js\");\n\r\n\r\n\r\n\r\nnew _modules_textExtender__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\r\n    triggers: '.comment-info__text-more',\r\n    target: '.comment-info__text',\r\n    activeClass: 'comment-info__text--extended'\r\n})\r\n\r\nnew _modules_addStar__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\n\r\nnew _modules_imageZoomer__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\r\n    triggers: '.comment__extended-img'\r\n})\n\n//# sourceURL=webpack:///./src/js/scripts.js?");
 
 /***/ })
 
